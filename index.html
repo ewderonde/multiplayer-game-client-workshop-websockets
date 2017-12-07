@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplayer game - Workshop</title>
+        <meta name="description" content="Client for multiplayer game">
+        <meta name="author" content="Sven de Ronde">
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="signDiv">
+            <p>Enter name</p>
+            <input id="signDiv-username" onkeydown="enterGame(event)" type="text"></input>
+        </div>
+
+        <div id="gameDiv" style="display:none; margin:0 auto;">
+            <canvas id="ctx" width="1000" height="750" style="border:1px solid #000000; float:left"></canvas>
+
+            <div id="score-board" class="unselectable">
+                <p style="font-size:28px;">Scoreboard:</p>
+                <div id="score-list">
+
+                </div>
+            </div>
+            
+            <div id="chat-box">
+                <div id="chat-text" class="unselectable">
+                </div>
+                <input id="chat-input" onkeydown="sendMessage(event)" type="text" autocomplete="off" placeholder="Type here..."></input>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script src="./js/game/main.js"></script>
+        <script src="./js/game/player.js"></script>
+        <script src="./js/game/bullet.js"></script>
+        <script src="./js/game/events.js"></script> 
+        <script src="./js/game/ui.js"></script>
+        <script src="./js/opdracht.js"></script>
+    </body>
+</html>
+
+
+
+
+
